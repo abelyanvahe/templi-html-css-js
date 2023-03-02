@@ -6,11 +6,9 @@ window.onload = (event) => {
     .forEach((fav) =>
       fav.addEventListener("click", (event) => {
         event.preventDefault(); // don't navigate away
-        console.log("event", event.target);
         var id = event.target.dataset.id;
-        console.log("id", id);
         if (favs.includes(id)) {
-          favs.splice(favs.indexOf(id));
+          favs.splice(favs.indexOf(id), 1);
           event.target.classList.remove("fa-solid");
           event.target.classList.add("fa-regular");
         } else {
@@ -18,8 +16,6 @@ window.onload = (event) => {
           event.target.classList.remove("fa-regular");
           event.target.classList.add("fa-solid");
         }
-        console.log("x", event.target.classList);
-        console.log("favs", favs);
         document.querySelector("header .favourites .heart span").innerHTML =
           favs.length;
       })
