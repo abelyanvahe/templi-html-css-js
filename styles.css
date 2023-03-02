@@ -1,0 +1,115 @@
+* {
+    font-family: 'Libre Franklin';
+    color: #333333;
+}
+
+body {
+    margin: 0;
+}
+
+.btn {
+    background-color: white;
+    color: #4F4F4F;
+    border-radius: 4px;
+    padding: 8px 24px 8px 24px;
+    border: 1px solid #B6B6B6;
+}
+
+#page-wrapper {
+    background-color: #E0E0E0;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 32px;
+    background: #FFFFFF;
+}
+
+header .logo {
+    font-weight: 600;
+}
+
+/* Header => Favorites */
+
+header .favourites .heart {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .favourites > span {
+    font-weight: 500;
+    color: #333333;
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+header .favourites .heart:before {
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 0;
+    content: "\f004";
+    color: #B6B6B6;
+    font-size: 32px;
+}
+
+header .favourites .heart span {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 12px;
+}
+
+.content {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Content => Cats */
+
+#cats {
+    padding: 50px 0;
+}
+
+#cats .list {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+#cats .list .cat {
+    display: grid;
+    grid-auto-flow: row;
+    padding: 24px;
+    background-color: white;
+}
+
+#cats .list .cat .image-wrapper img {
+    width: 100%;
+    max-height: 100%;
+}
+
+#cats .list .cat h3 {
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 16px;
+}
+
+#cats .list .cat .cat-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 4px 0;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
