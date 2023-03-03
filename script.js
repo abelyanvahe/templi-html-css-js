@@ -26,7 +26,7 @@ window.onload = (event) => {
     .querySelectorAll(".items .list .item .image-wrapper i")
     .forEach((fav) =>
       fav.addEventListener("click", (event) => {
-        event.preventDefault(); // don't navigate away
+        event.preventDefault();
         const { id } = event.target.dataset;
         if (favs.includes(parseInt(id))) {
           favs.splice(favs.indexOf(id), 1);

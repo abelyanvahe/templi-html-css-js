@@ -1,3 +1,5 @@
+/* Mobile-First approach has been used */
+
 * {
     font-family: 'Libre Franklin';
     color: #333333;
@@ -23,19 +25,25 @@ body {
 /* Header */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 32px;
     background: #FFFFFF;
 }
 
-header .logo {
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.header-content .logo {
     font-weight: 600;
 }
 
-/* Header => Favorites */
+/* .header-content => Favorites */
 
-header .favourites .heart {
+.header-content .favourites .heart {
     position: relative;
     width: 32px;
     height: 32px;
@@ -44,14 +52,14 @@ header .favourites .heart {
     justify-content: center;
 }
 
-header .favourites > span {
+.header-content .favourites > span {
     font-weight: 500;
     color: #333333;
     margin-left: 8px;
     font-size: 16px;
 }
 
-header .favourites .heart:before {
+.header-content .favourites .heart:before {
     position: absolute;
     font-family: 'FontAwesome';
     top: 0;
@@ -60,7 +68,7 @@ header .favourites .heart:before {
     font-size: 32px;
 }
 
-header .favourites .heart span {
+.header-content .favourites .heart span {
     position: relative;
     z-index: 1;
     color: white;
@@ -80,7 +88,6 @@ header .favourites .heart span {
 
 .items .list {
     display:grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
 }
 
@@ -128,5 +135,20 @@ header .favourites .heart span {
 .items .toolbar {
     display: flex;
     justify-content: flex-end;
-    margin: 20px 0;
+    margin: 20px 24px;
+}
+
+@media only screen and (min-width: 768px) {
+    .items .list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .items .toolbar {
+        margin: 20px 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .items .list {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
