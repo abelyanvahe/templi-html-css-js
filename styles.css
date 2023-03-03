@@ -74,33 +74,33 @@ header .favourites .heart span {
 
 /* Content => Cats */
 
-#cats {
+.items {
     padding: 50px 0;
 }
 
-#cats .list {
+.items .list {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
 }
 
-#cats .list .cat {
+.items .list .item {
     display: grid;
     grid-auto-flow: row;
     padding: 24px;
     background-color: white;
 }
 
-#cats .list .cat .image-wrapper {
+.items .list .item .image-wrapper {
     position: relative;
 }
 
-#cats .list .cat .image-wrapper img {
+.items .list .item .image-wrapper img {
     width: 100%;
     max-height: 100%;
 }
 
-#cats .list .cat .image-wrapper i {
+.items .list .item .image-wrapper i {
     position:absolute;
     right: 11px;
     top: 6px;
@@ -108,24 +108,24 @@ header .favourites .heart span {
     cursor: pointer;
 }
 
-#cats .list .cat .image-wrapper i.active {
+.items .list .item .image-wrapper i.active {
     background-color: #E0E0E0;
 }
 
-#cats .list .cat h3 {
+.items .list .item h3 {
     font-weight: 500;
     margin-bottom: 0;
     margin-top: 16px;
 }
 
-#cats .list .cat .cat-description {
+.items .list .item .item-description {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
     margin: 4px 0;
 }
 
-#cats .toolbar {
+.items .toolbar {
     display: flex;
     justify-content: flex-end;
     margin: 20px 0;
